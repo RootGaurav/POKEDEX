@@ -237,6 +237,8 @@
   
   .pokemon-detail-wrapper {
     min-height: 76px;
+    box-shadow: 7px 8px 9px 0px lightgreen;
+    background-color: rgb(243, 243, 243);
   }
   
   .pokemon-detail.move {
