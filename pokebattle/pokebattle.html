@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="pokebattle.css">
 </head>
 
 
@@ -18,16 +19,16 @@
         </div>
         <div class="innernav">
             <div class="about navi">
-                <a href="about.html">About</a>
+                <a href="/about.html">About</a>
             </div>
             <div class="game1 navi"> 
-                <a href="game1/game1.html"> Pik-Pac-Po</a>
+                <a href="/game1/game1.html"> Pik-Pac-Po</a>
             </div>
             <div class="game2 navi">
-                <a href="game2/game2.html">Who's that</a>
+                <a href="/game2/who-is-that-pokemon/index.html">Who's that</a>
             </div>
             <div class="pokebattle navi" >
-                <a href="pokebattle/pokebattle.html">Pokebattle</a>
+                <a href="/pokebattle/pokebattle.html">Pokebattle</a>
             </div>
     
         </div>
@@ -35,9 +36,81 @@
     </div>
 
 
-    <main class="main">
-        
-    </main>
+<main class="main">
+
+<div class="game">
+  <div class="opponent">
+    <div class="stats">
+      <div class="top">
+        <div class="pokeballs">
+          <div class="pokeball"></div>
+          <div class="pokeball"></div>
+          <div class="pokeball"></div>
+          <div class="pokeball"></div>
+          <div class="pokeball"></div>
+        </div>
+        <div id = "apHP" class="hp-count">100</div>
+      </div>
+      <span class="name">
+        Charizard
+      </span>
+      <span class="level">
+        86
+      </span>
+    </div>
+    <img class="pokemon" src="http://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif" alt ="A sprite of charizard" />
+  </div>
+  <div class="player">
+    <div class="stats">
+      <div class="top">
+        <div class="pokeballs">
+          <div class="pokeball"></div>
+          <div class="pokeball"></div>
+          <div class="pokeball"></div>
+          <div class="pokeball"></div>
+          <div class="pokeball"></div>
+        </div>
+        <div id = "myHP" class="hp-count">100</div>
+      </div>
+      <span class="name">
+        Blastoise
+      </span>
+      <span class="level">
+        86
+      </span>
+    </div>
+    <img class="pokemon" src="http://bit.ly/blastoisegif" alt="A gif from blastoises back sprite" />
+  </div>
+</div>
+<div class="box">
+  <div class="innerbox1">
+    <div id = "message" class="message">
+      What should Blastoise do?
+    </div>
+    <div class = "continue">
+      <button onclick = "compPokemon()">Continue</button>
+    </div>
+  </div>
+  <div class="innerbox2">
+    <div class="actions">
+      <button onclick = "waterCannon()">Water Cannon</button>
+    </div>
+    <div class="actions">
+      <button onclick = "waterPulse()">Water Pulse</button>
+    </div>
+    <div class="actions">
+      <button onclick = "surf()">Surf</button>
+    </div>
+    <div class="actions">
+      <button onclick = "tackle()">Tackle</button>
+    </div>
+  
+  </div>
+
+
+</div>
+</main>
+    <script src="pokebattle.js"></script>
 </body>
 
 </html>
