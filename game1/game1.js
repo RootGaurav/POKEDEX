@@ -31,7 +31,7 @@ boxes.forEach((box) => {
       //playerO
       box.innerHTML = `
       <div class="boximg">
-      <img class="boximg " src="/images/p.gif" alt="O">
+      <img class="boximg " src="../images/p.gif" alt="O">
     
       </div>
       `;
@@ -40,7 +40,7 @@ boxes.forEach((box) => {
       //playerX
       box.innerHTML = `
       <div class="boximg">
-      <img class="boximg" src="/images/bot.gif" alt="X">
+      <img class="boximg" src="../images/bot.gif" alt="X">
     
       </div>
 
