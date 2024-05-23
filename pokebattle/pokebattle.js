@@ -97,6 +97,8 @@ function tackle() {
     document.getElementById('message').innerHTML = " Blastoise's attack missed! "
   }
   else {
+    let p1=document.getElementById('blastoise');
+    p1.style.transform=translate(200);
     document.getElementById('message').innerHTML = " Blastoise used tackle ";
     var critical = Math.floor((Math.random() * 10) + 1);
       if(critical == 4){

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pokémon Battle Game</title>
+    <link rel="stylesheet" href="../style.css" />
+
+    <link rel="stylesheet" href="battle.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img src="../assets/pokeball.svg" alt="pokeball" />
+            <p>Pokedex</p>
+        </div>
+        <div class="innernav">
+            <div class="about navi">
+                <a href="../about.html">About</a>
+            </div>
+            <div class="game1 navi"> 
+                <a href="game1.html"> Pik-Pac-Po</a>
+            </div>
+            <div class="game2 navi">
+                <a href="../game2/index.html">Who's that</a>
+            </div>
+            <div class="pokebattle navi" >
+                <a href="../battle/battle.html">Pokebattle</a>
+            </div>
+    
+        </div>
+    
+    </div>
+
+
+    <main>
+        <div id="game">
+            <div class="firsthalf">
+    
+            </div>
+            <div class="secondhalf">
+                <div id="pokemon-select-container">
+                    <div id="selectpoke">
+                        <select id="pokemon1-select" class="pokemonselect"></select>
+                        <select id="pokemon2-select" class="pokemonselect"></select>
+                    </div>
+                    <div id="start">
+        
+                        <button id="start-battle">Start Battle</button>
+                    </div>
+                </div>
+        
+                <div id="battlefield">
+
+                    <div id="winnerdiv">
+                        <div id="innerwindiv">
+                            <img id="winimage" src="../images/bot.gif" alt="winner here">
+                        </div>
+                        <div id="winner">
+                            I am the winner
+                        </div>
+                        
+                    </div>
+                    <div id="pokemon1" class="pokemon">
+        
+                        <div class="health-bar">
+                            <div id="hp1" class="hp">100%</div>
+                            <div class="hebox">
+                               <div class="health1"></div>
+                            </div>
+                            
+                        </div>
+    
+                        <div class="pokemonbody">
+                            <img src="../images/pokemon-icon.png" alt="Pokemon 1" class="pokemon-sprite">
+                        </div>
+                        
+                        <div id="move-select-container1" 
+                        class="move-select-container" class="hidden">
+                            <select id="pokemon-moves1"></select>
+                            <button id="attack1" class="attack">Attack</button>
+                        </div>
+                    </div>
+        
+                    <div id="pokemon2" class="pokemon">
+                        <div class="health-bar">
+                            <div id="hp2" class="hp">100%</div>
+                            <div class="hebox">
+                            <div class="health2"></div>
+                            </div>
+                            
+                        </div>
+                        
+                        
+                        <div class="pokemonbody">
+                            <img src="../images/pokemon-icon.png" alt="Pokemon 2" class="pokemon-sprite">
+                        </div>
+    
+    
+                        <div id="move-select-container2" class="move-select-container" class="hidden">
+                            <select id="pokemon-moves2"></select>
+                            <button id="attack2" class="attack">Attack</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+    
+            <div class="thirdhalf">
+                
+            </div>
+    
+          
+        </div>
+    </main>
+   
+    <script src="battle.js"></script>
+</body>
+
+</html>

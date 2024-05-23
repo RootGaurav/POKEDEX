@@ -1,0 +1,313 @@
+
+
+*
+{
+padding: 0;
+margin: 0;
+overflow-y: hidden;
+
+}
+
+main
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#game {
+    height: 80vh;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    /* background-image:url("cheer.gif"); */
+    background-size: 100% 100%;
+    
+    /* overflow-y: hidden; */
+
+}
+
+
+.firsthalf
+{
+    height: 100%;
+    width: 20%;
+    /* background-image:url("cheer.gif"); */
+    
+background-image:url("crowd.gif");
+}
+.secondhalf
+{
+    height: 100%;
+    width: 70%;
+    /* overflow-x: hidden; */
+    border: 5px solid rgb(255, 255, 255);
+    
+}
+.thirdhalf
+{
+    height: 100%;
+    width: 20%;
+    background-image:url("crowd.gif");
+
+
+}
+#pokemon-select-container
+{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: 105% 100%;
+    background-image:url("versus.jpg");
+    background-repeat: no-repeat;
+    gap: 20%;
+
+}
+#selectpoke
+{
+
+    display: flex;
+    gap: 30%;
+    height: 35%;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#selectpoke select
+{
+    font-weight: 100;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+}
+#pokemon1-select
+{
+    background-color: #09c7fb;
+
+}
+
+#pokemon2-select
+{
+    background-color: #93fb9d ;
+ 
+}
+.pokemonselect
+{
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+
+
+#start button
+{
+    height: 50px;
+    width: 120px;
+    /* background-color: rgb(195, 231, 231); */
+    background-color: #09c7fb;
+background-image: linear-gradient(315deg, #93fb9d 40%,  #09c7fb  74%);
+
+    border-radius: 10%;
+}
+#start
+{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+
+#battlefield
+{
+    display: flex;
+    height: 60%;
+    width: 100%;
+    display: flex;
+    /* border: 2px solid rgb(255, 252, 252); */
+    /* border-radius: 10px; */
+    background-image: url(arena.png);
+    background-size: 100% 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+.pokemon
+{
+display: flex;
+width: 50%;
+height: 100%;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+.health-bar {
+    width: 80%;
+    height:10%;
+    /* background: rgb(255, 231, 231); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.hebox
+{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+ 
+}
+
+.health1,.health2 {
+    width: 100%;
+    height: 40%;
+    background: rgba(60, 225, 0, 0.704); 
+    float: left;
+}
+.hp
+{
+display: flex;
+width: 20%;
+color: aliceblue;
+font-size: 0.5rem;
+justify-content: end;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.pokemonbody{
+width: 100%;
+height: 60%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.pokemon-sprite {
+    width: 50%;
+    height: 80%;
+}
+
+#pokemon1 img
+{
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.move-select-container
+{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10%;
+}
+.move-select-container select
+{
+    width: 50%;
+    height: 30%;
+    font-weight: 100;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.move-select-container select:hover
+{
+    background-color: antiquewhite;
+}
+
+
+.move-select-container button{
+    height: 30%;
+    width: 30%;
+    border-radius: 10%;
+}
+
+#attack1,#pokemon-moves1
+{
+    background-color: #09c7fb;
+    
+}
+#attack2,#pokemon-moves2
+{
+    background-color: #93fb9d;
+
+}
+
+
+/* Add animations for different moves */
+@keyframes shake {
+    0% { transform: translateX(0px); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+    100% { transform: translateX(0px); }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+
+#winnerdiv
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    flex-direction: column;
+    position: absolute;
+    height: 45%;
+    width: 45%;
+    z-index: -4;
+    opacity: .8;
+    font-size: 1.8rem;
+    font-weight: 600;
+    /* background-color: rgb(255, 60, 0); */
+    border-radius: 5px;
+    background-color: aliceblue;
+
+}
+#innerwindiv
+{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#winimage
+{
+    height: 80%;
+    width: 80%;
+}
+#winner
+{
+    height: 30%;
+}
