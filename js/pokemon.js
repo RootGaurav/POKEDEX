@@ -85,7 +85,7 @@ function displayPokemons(allpokemon) {
         </div>
         <div class="content2">
                 <div class="dp">
-                    <img src="images/pokemon-icon.png" alt="">
+                    <img src="../images/pokemon-icon.png" alt="">
                 </div>
                 <div class="name${pokemonID} name">
                 </div>
@@ -117,7 +117,7 @@ function displayPokemons(allpokemon) {
     listItem.addEventListener("click", async () => {
       const success = await fetchPokemonDataBeforeRedirect(pokemonID);
       if (success) {
-        window.location.href = `./detail.html?id=${pokemonID}`;
+        window.location.href = `../detail/detail.html?id=${pokemonID}`;
       }
     });
 

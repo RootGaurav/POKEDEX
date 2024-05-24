@@ -1,0 +1,202 @@
+
+// variables
+$yellow: #ffe93e;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+  }
+
+body{
+    background-position: right;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    background: linear-gradient(#EEEEEE, #444444);
+}
+
+
+// content
+.container{
+    width: 100vw;
+    margin-top: 15vh;
+    display: flex;
+    .left{
+        font-size: 5vw;
+        width: 90vw;
+        padding: 6vh 5vw;
+        font-weight: 700;
+    }
+    .right{
+        width: 110vw;
+        img{
+            width: 48vw;
+        }
+    }
+}
+
+
+.first-page-text-link{
+    color: green;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 500ms;
+    text-decoration: none;
+    &:hover{
+        color: $yellow;
+    }
+}
+
+// characters
+.characters{
+    margin-top: 10vh;
+    margin-bottom: 20vh;
+    display: flex;
+    .left_char{
+        width: 50vw;
+        img{
+            height: 50vw;
+        }
+    }
+    .right_char{
+        font-size: 6vw;
+        margin-top: 20vh;
+        font-weight: 700;
+    }
+}
+
+// shop
+.shop{
+    display: flex;
+    .left_shop{
+        font-size: 6vw;
+        width: 90vw;
+        padding: 6vh 5vw;
+        font-weight: 700;
+        #buy_btn{
+            background-color: $yellow;
+            font-size: 3vw;
+            color: #fff;
+            border:none;
+            border-radius: 5px;
+            outline: none;
+            padding: 1vh 2vw;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+            transition: 200ms;
+            &:hover{
+                background-color: #000;
+                color: $yellow;
+            }
+        }
+    }
+    .right_shop{
+        img{
+            width: 55vw;
+        }
+    }
+}
+
+// scroll bar
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #000; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $yellow; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  
+  /* Up and Down Button*/
+  ::-webkit-scrollbar-button{
+      background-color: #000;
+  }
+
+
+  // back to top
+  #button {
+    display: inline-block;
+    background-color: #000000;
+    padding: 20px 20px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    color: $yellow;
+    
+   &:hover {
+    cursor: pointer;
+    background-color: #333;
+  }
+}
+
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+// responsive
+@media only all and (max-width: 1000px) {
+    .characters{
+        .right_char{
+            padding-left: 10vw;
+        }
+    }
+}
+
+@media only all and (max-width: 850px) {
+        .container{
+            .left{
+                font-size: 7vw;
+            }
+            .right{
+                img{
+                    width: 55vw;
+                }
+            }
+        }
+        .characters{
+            .right{
+                font-size: 8vw;
+            }
+        }
+        .shop{
+            .left_shop{
+                font-size: 6vw;
+            }
+        }
+    }
+
+@media only all and (max-width: 600px) {
+    body{
+        background-attachment: scroll ;
+    }
+    .characters{
+        .right{
+            margin-top: 8vh;
+        }
+    }
+}

@@ -34,7 +34,7 @@ main
     width: 20%;
     /* background-image:url("cheer.gif"); */
     
-background-image:url("crowd.gif");
+background-image:url("../battle/crowd.gif");
 }
 .secondhalf
 {
@@ -48,7 +48,7 @@ background-image:url("crowd.gif");
 {
     height: 100%;
     width: 20%;
-    background-image:url("crowd.gif");
+    background-image:url("../battle/crowd.gif");
 
 
 }
@@ -61,7 +61,7 @@ background-image:url("crowd.gif");
     align-items: center;
     flex-direction: column;
     background-size: 105% 100%;
-    background-image:url("versus.jpg");
+    background-image:url("../battle/versus.jpg");
     background-repeat: no-repeat;
     gap: 20%;
 
@@ -138,7 +138,7 @@ background-image: linear-gradient(315deg, #93fb9d 40%,  #09c7fb  74%);
     display: flex;
     /* border: 2px solid rgb(255, 252, 252); */
     /* border-radius: 10px; */
-    background-image: url(arena.png);
+    background-image: url(../battle/arena.png);
     background-size: 100% 100%;
     justify-content: center;
     align-items: center;
@@ -289,10 +289,8 @@ align-items: center;
     opacity: .8;
     font-size: 1.8rem;
     font-weight: 600;
-    /* background-color: rgb(255, 60, 0); */
     border-radius: 5px;
-    background-color: aliceblue;
-
+    background-color: rgb(255, 255, 255);
 }
 #innerwindiv
 {

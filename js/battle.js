@@ -166,10 +166,9 @@ attackButton1.addEventListener('click', function () {
     if(health2<30) hp2.style.color='RED';
     // Update
     
-    document.getElementById("pokemon2").classList.add('shake');
-setTimeout(() => {
-    document.getElementById("pokemon2").classList.remove('shake');
-}, 500);
+
+    //shake effect
+    shakeit("pokemon2");
     
 });
 
@@ -198,14 +197,20 @@ attackButton2.addEventListener('click', function () {
     hp1.innerHTML = health1 + '%';
     if(health1<30) hp1.style.color='RED';
 
-    document.getElementById("pokemon1").classList.add('shake');
-setTimeout(() => {
-    document.getElementById("pokemon1").classList.remove('shake');
-}, 500);
+    //shake effect
+    shakeit("pokemon1");
+
 });
 
 
+function shakeit(pokemon)
+{
 
+    document.getElementById(`${pokemon}`).classList.add('shake');
+setTimeout(() => {
+    document.getElementById(`${pokemon}`).classList.remove('shake');
+}, 500);
+}
 
 function updateHealthBar(currentHealth) {
     const healthBar1 = document.querySelector('#pokemon2 .health1');
@@ -223,15 +228,15 @@ function updateHealthBar(currentHealth) {
 // Function to decrease health
 
 
-const defenderId = 'pokemon2'; // Assuming Pokémon 2 is the defender
-const defenderHealth = 50; // Example health value
-// Update health bars and display messages
-// ...
-// Animate the attack (e.g., shake the defender)
-document.getElementById(defenderId).classList.add('shake');
-setTimeout(() => {
-    document.getElementById(defenderId).classList.remove('shake');
-}, 500);
+// const defenderId = 'pokemon2'; // Assuming Pokémon 2 is the defender
+// const defenderHealth = 50; // Example health value
+// // Update health bars and display messages
+// // ...
+// // Animate the attack (e.g., shake the defender)
+// document.getElementById(defenderId).classList.add('shake');
+// setTimeout(() => {
+//     document.getElementById(defenderId).classList.remove('shake');
+// }, 500);
 
 //     // JavaScript: Function to populate moves with tooltips
 
