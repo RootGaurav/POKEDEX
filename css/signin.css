@@ -15,14 +15,16 @@
     justify-content: center;
     background-color: #4070f4;
     column-gap: 30px;
+    background-image: url(../newpeice/public/img/pokemons.png);
 }
 .form{
     position: absolute;
     max-width: 430px;
     width: 100%;
-    padding: 30px;
+    padding: 20px;
     border-radius: 6px;
     background: #FFF;
+    opacity: 0.9;
 }
 .form.signup{
     opacity: 0;
@@ -152,15 +154,18 @@ img.google-img{
 img.google-img{
     height: 20px;
     width: 20px;
-    object-fit: cover;
+    /* object-fit: cover; */
+    border-radius: 50%;
 }
 a.google{
     border: 1px solid #CACACA;
+    background-color: rgb(240, 181, 113);
 }
 a.google span{
     font-weight: 500;
     opacity: 0.6;
     color: #232836;
+    height: 20px;
 }
 
 @media screen and (max-width: 400px) {

@@ -459,7 +459,7 @@ div#not-found-message {
 
 /* navabar */
 
-
+/* 
 @import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
 * {
   font-family: "Handlee", cursive;
@@ -487,12 +487,12 @@ div#not-found-message {
   top: 0;
   z-index: 5;
 }
-
+*/
 .navbar .logo img {
   height: 6vw;
   width: 20vw;
 }
-
+/*
 .navbar nav {
   width: 40vw;
   display: -webkit-box;
@@ -553,4 +553,4 @@ div#not-found-message {
     width: 50vw;
   }
 }
-/*# sourceMappingURL=navbar.css.map */
+# sourceMappingURL=navbar.css.map */

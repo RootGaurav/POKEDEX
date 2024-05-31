@@ -8,18 +8,35 @@
         <title> Responsive Login and Signup Form </title>
 
         <!-- CSS -->
-        <link rel="stylesheet" href="./signin.css">
+        <link rel="stylesheet" href="../css/signin.css">
+        <link rel="stylesheet" href="../newpeice/public/style/navbar.css">
                 
         <!-- Boxicons CSS -->
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
                         
     </head>
     <body>
+
+        <div class="navbar">
+            <div class="logo">
+                <img src="../images/pokemon.png" alt="logo">
+                
+            </div>
+            <nav>
+                <!-- <a href="#">Home</a>
+                 -->
+                <a href="#">Pokedex</a>
+                <a href="#">Shop</a>
+                <a href="#">pik-pak-po</a>
+                <a href="#">Who's that pokemon</a>
+                <a href="#">Pokebattle</a>
+            </nav>
+        </div>
         <section class="container forms">
             <div class="form login">
                 <div class="form-content">
                     <header>Login</header>
-                    <form action="../index.html">
+                    <form action="../newpeice/index.html">
                         <div class="field input-field">
                             <input type="email" placeholder="Email" class="input">
                         </div>
@@ -36,7 +53,7 @@
                         <div class="field button-field">
                             <button>Login</button>
                         </div>
-                    </form>
+                    </form> 
 
                     <div class="form-link">
                         <span>Don't have an account? <a href="#" class="link signup-link">Signup</a></span>
@@ -54,7 +71,8 @@
 
                 <div class="media-options">
                     <a href="#" class="field google">
-                        <img src="#" alt="" class="google-img">
+                        <img src="../images/googleicon.png" alt="" class="google-img">
+                        
                         <span>Login with Google</span>
                     </a>
                 </div>

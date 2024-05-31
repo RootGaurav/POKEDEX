@@ -183,7 +183,7 @@
     font-weight: var(--font-weight-bold);
     color: var(--grayscale-white);
     text-transform: capitalize;
-    background-color: #74cb48;
+    background-color: #7a926f;
   }
   
   .pokemon-detail.move p {
@@ -237,7 +237,7 @@
   
   .pokemon-detail-wrapper {
     min-height: 76px;
-    box-shadow: 7px 8px 9px 0px lightgreen;
+    box-shadow: 7px 8px 9px 0px rgb(196, 208, 196);
     background-color: rgb(243, 243, 243);
   }
   

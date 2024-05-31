@@ -58,7 +58,7 @@ function showPokemon() {
   spriteElement.style.setProperty('transition', 'filter 1s ease-out'); // add CSS property to reveal Pokemon with simple transition from shadow to normal brightness
   spriteElement.style.setProperty('filter', 'initial');
   pokemonNameElement.innerHTML = pokemonName; // show Pokemon's name
-  setTimeout(() => getPokemon(), 2000); // wait two seconds before generating new Pokemon and start the same logic again
+  setTimeout(() => getPokemon(), 4000); // wait two seconds before generating new Pokemon and start the same logic again
 }
 //function that generates random number between min value and max value.
 function getRandomIntInclusive(min, max) {
