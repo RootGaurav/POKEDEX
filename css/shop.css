@@ -1,0 +1,166 @@
+/* shop.css */
+
+/* Reset and base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f9fc;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2a2a72;
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo img {
+  height: 40px;
+}
+
+.navbar nav {
+  margin-left: auto;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+  color: #f1c40f;
+}
+
+/* Search Bar */
+.search {
+  max-width: 600px;
+  margin: 2rem auto 1rem;
+  padding: 0 1rem;
+}
+
+.search input[type="search"] {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: 1.8px solid #b8b8b8;
+  transition: border-color 0.3s ease;
+}
+
+.search input[type="search"]:focus {
+  border-color: #2a2a72;
+  outline: none;
+}
+
+/* Shop Main Container */
+.shop-main {
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Each Section inside shop-main */
+.shop-main .section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Product Card */
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.card img.get-shop {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-content {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #2a2a72;
+}
+
+.card-content p {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.card-content button {
+  align-self: stretch;
+  padding: 0.7rem 0;
+  background-color: #2a2a72;
+  border: none;
+  color: white;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.card-content button:hover {
+  background-color: #3f3f91;
+}
+
+/* Breaker Section (Offers, Banners) */
+.breaker {
+  width: 100%;
+  background: #f1c40f;
+  color: #1b1b1b;
+  font-weight: 700;
+  font-size: 1.6rem;
+  padding: 3rem 1rem;
+  text-align: center;
+  border-radius: 12px;
+  margin: 2rem 0;
+  
+}

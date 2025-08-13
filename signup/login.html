@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Login and Signup Form</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/signin.css" />
+    <link rel="stylesheet" href="../newpeice/public/style/navbar.css" />
+
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+            <img src="../images/pokemon.png" alt="logo" />
+        </div>
+        <nav>
+            <a href="#">Pokedex</a>
+            <a href="#">Shop</a>
+            <a href="#">pik-pak-po</a>
+            <a href="#">Who's that pokemon</a>
+            <a href="#">Pokebattle</a>
+        </nav>
+    </div>
+
+    <section class="container forms">
+
+        <!-- Login Form -->
+        <div class="form login">
+            <div class="form-content">
+                <header>Login</header>
+                <form id="loginForm" novalidate>
+                    <div class="field input-field">
+                        <input id="loginEmail" type="email" placeholder="Email" required />
+                        <small class="error-message" id="loginEmailError"></small>
+                    </div>
+
+                    <div class="field input-field">
+                        <input id="loginPassword" type="password" placeholder="Password" class="password" required minlength="6" />
+                        <i class='bx bx-hide eye-icon'></i>
+                        <small class="error-message" id="loginPasswordError"></small>
+                    </div>
+
+                    <div class="form-link">
+                        <a href="#" class="forgot-pass">Forgot password?</a>
+                    </div>
+
+                    <div class="field button-field">
+                        <button type="submit">Login</button>
+                    </div>
+                </form>
+
+                <div class="form-link">
+                    <span>Don't have an account? <a href="#" class="link signup-link">Signup</a></span>
+                </div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="media-options">
+                <a href="#" class="field facebook">
+                    <i class='bx bxl-facebook facebook-icon'></i>
+                    <span>Login with Facebook</span>
+                </a>
+            </div>
+
+            <div class="media-options">
+                <a href="#" class="field google">
+                    <img src="../images/googleicon.png" alt="" class="google-img" />
+                    <span>Login with Google</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Signup Form -->
+        <div class="form signup">
+            <div class="form-content">
+                <header>Signup</header>
+                <form id="signupForm" novalidate>
+                    <div class="field input-field">
+                        <input id="signupEmail" type="email" placeholder="Email" required />
+                        <small class="error-message" id="signupEmailError"></small>
+                    </div>
+
+                    <div class="field input-field">
+                        <input id="signupPassword" type="password" placeholder="Create password" class="password" required minlength="6" />
+                        <small class="error-message" id="signupPasswordError"></small>
+                    </div>
+
+                    <div class="field input-field">
+                        <input id="signupConfirmPassword" type="password" placeholder="Confirm password" class="password" required minlength="6" />
+                        <i class='bx bx-hide eye-icon'></i>
+                        <small class="error-message" id="signupConfirmPasswordError"></small>
+                    </div>
+
+                    <div class="field input-field">
+                        <input id="signupUsername" type="text" placeholder="Username" required minlength="3" />
+                        <small class="error-message" id="signupUsernameError"></small>
+                    </div>
+
+                    <div class="field button-field">
+                        <button type="submit">Signup</button>
+                    </div>
+                </form>
+
+                <div class="form-link">
+                    <span>Already have an account? <a href="#" class="link login-link">Login</a></span>
+                </div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="media-options">
+                <a href="#" class="field facebook">
+                    <i class='bx bxl-facebook facebook-icon'></i>
+                    <span>Login with Facebook</span>
+                </a>
+            </div>
+
+            <div class="media-options">
+                <a href="#" class="field google">
+                    <img src="../images/googleicon.png" alt="" class="google-img" />
+                    <span>Login with Google</span>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- JavaScript -->
+    <script src="../js/signin.js"></script>
+    
+</body>
+</html>

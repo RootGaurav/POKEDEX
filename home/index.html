@@ -9,6 +9,14 @@
     <script src="../js/pokemon.js" defer></script>
     <link rel="stylesheet" href="../newpeice/public/style/navbar.css">
     <!-- <script src="./search.js" defer></script> -->
+     <script>
+  fetch('../signup/profile.php')
+    .then(res => {
+      if (!res.ok) window.location.href = '../signup/login.html';
+    })
+    .catch(() => window.location.href = '../signup/login.html');
+</script>
+
 </head>
 
 
@@ -22,8 +30,9 @@
         <nav>
             <!-- <a href="#">Home</a>
              -->
+            <a href="../newpeice/index.html">Home</a>
             <a href="../home/index.html">Pokedex</a>
-            <a href="../newpeice/public/Pages/shop.html">Shop</a>
+            <a href="../shop/shop.html">Shop</a>
             <a href="../game1/game1.html">pik-pak-po</a>
             <a href="../game2/index.html">Who's that pokemon</a>
             <a href="../battle/battle.html">Pokebattle</a>
