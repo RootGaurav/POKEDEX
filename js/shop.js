@@ -1,89 +1,89 @@
-document.addEventListener('DOMContentLoaded', async () => {
-  const shopMain = document.querySelector('.shop-main');
-  if (!shopMain) {
-    console.error('shopMain element not found');
+// ../js/shop.js
+
+const API = {
+  list: "../shop/get_products.php"
+};
+
+const state = { products: [], filtered: [] };
+
+function formatINR(n) {
+  return new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR" }).format(Number(n) || 0);
+}
+
+function cardHTML(p) {
+  return `
+    <div class="product-card">
+      <div class="product-image-wrap">
+        <img src="${p.image_url}" alt="${p.name}" loading="lazy" />
+      </div>
+      <div class="product-info">
+        <h3 class="product-title">${p.name}</h3>
+        <p class="product-desc">${p.description || ""}</p>
+        <div class="price-row">
+          <span class="price">${formatINR(p.price)}</span>
+          <button class="btn primary buy-btn" data-id="${p.id}">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderProducts(list) {
+  const root = document.getElementById("shop-main");
+  if (!root) return;
+  if (!list || list.length === 0) {
+    root.innerHTML = `<p>No products found.</p>`;
     return;
   }
+  root.innerHTML = list.map(cardHTML).join("");
+}
 
-  // Clear shop content before loading
-  shopMain.innerHTML = '';
-
+async function loadProducts() {
   try {
-    // Fetch products from backend API
-    const res = await fetch('../shop/get_products.php');
-    const products = await res.json();
-
-    if (!products.length) {
-      // Display "Coming Soon" message centered if no products
-      shopMain.innerHTML = `
-        <div style="display:flex; justify-content:center; align-items:center; height: 300px; font-size: 1.8rem; color: #777;">
-          Coming Soon
-        </div>
-      `;
-      return;
-    }
-
-    // Create a new section container for product cards
-    const section = document.createElement('div');
-    section.classList.add('section');
-    shopMain.appendChild(section);
-
-    // Dynamically generate product cards and add to section
-    products.forEach(product => {
-      const card = document.createElement('div');
-      card.className = 'card';
-      card.innerHTML = `
-        <img src="${product.image_url}" alt="Shop Image" class="get-shop" />
-        <div class="card-content">
-          <h3>${product.name}</h3>
-          <p>${product.description} <br>Only Rs${product.price}</p>
-          <button data-productid="${product.id}">Buy Now!</button>
-        </div>
-      `;
-      section.appendChild(card);
-    });
-
-    // Attach event listeners to Buy buttons to handle purchases
-    section.querySelectorAll('button[data-productid]').forEach(button => {
-      button.addEventListener('click', async (e) => {
-        const productId = e.target.getAttribute('data-productid');
-
-        try {
-          const buyRes = await fetch('../shop/buy_product.php', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ product_id: productId }),
-          });
-          const data = await buyRes.json();
-          if (buyRes.ok) {
-            alert(data.message);
-          } else {
-            alert(data.error || 'Purchase failed.');
-          }
-        } catch {
-          alert('Network error. Please try again.');
-        }
-      });
-    });
-
-    // Implement search filter
-    const searchInput = document.querySelector('.search input[type=search]');
-    searchInput.addEventListener('input', () => {
-      const query = searchInput.value.toLowerCase();
-      const cards = section.querySelectorAll('.card');
-      cards.forEach(card => {
-        const title = card.querySelector('h3').textContent.toLowerCase();
-        const description = card.querySelector('p').textContent.toLowerCase();
-        card.style.display = (title.includes(query) || description.includes(query)) ? 'block' : 'none';
-      });
-    });
-
-  } catch (error) {
-    console.error('Failed to load products:', error);
-    shopMain.innerHTML = `
-      <div style="display:flex; justify-content:center; align-items:center; height: 300px; font-size: 1.8rem; color: #777;">
-        Failed to load products. Please try again later.
-      </div>
-    `;
+    const res = await fetch(API.list, { credentials: "include" });
+    if (!res.ok) throw new Error(`Failed to load products (${res.status})`);
+    const data = await res.json();
+    state.products = Array.isArray(data) ? data : [];
+    state.filtered = state.products.slice();
+    renderProducts(state.filtered);
+  } catch (err) {
+    console.error(err);
+    const root = document.getElementById("shop-main");
+    if (root) root.innerHTML = `<p>Failed to load products. Please try again later.</p>`;
   }
+}
+
+function setupSearch() {
+  const input = document.getElementById("search-input");
+  if (!input) return;
+  input.addEventListener("input", () => {
+    const q = input.value.toLowerCase().trim();
+    state.filtered = state.products.filter(p =>
+      p.name.toLowerCase().includes(q) ||
+      (p.description || "").toLowerCase().includes(q)
+    );
+    renderProducts(state.filtered);
+  });
+}
+
+function wireBuyNow() {
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".buy-btn");
+    if (!btn) return;
+    const id = btn.dataset.id;
+    if (!id) return;
+
+    const product = state.products.find(p => String(p.id) === String(id));
+    if (product) {
+      try { sessionStorage.setItem("checkoutProduct", JSON.stringify(product)); }
+      catch (e) { console.warn("sessionStorage not available", e); }
+    }
+    window.location.href = `../shop/purchase.html?id=${encodeURIComponent(id)}`;
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setupSearch();
+  wireBuyNow();
+  loadProducts();
 });

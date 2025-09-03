@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Purchase</title>
+  <link rel="shortcut icon" href="../img/Pokeball.svg.png" type="image/png" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/shop.css" />
+  <link rel="stylesheet" href="../newpeice/public/style/navbar.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="../newpeice/public/img/pokemon.png" alt="logo">
+    </div>
+    <nav>
+      <a href="../newpeice/index.html">Home</a>
+      <a href="../home/index.html">Pokedex</a>
+      <a href="../shop/shop.html">Shop</a>
+      <a href="../game1/game1.html">pik-pak-po</a>
+      <a href="../game2/index.html">Who's that pokemon</a>
+      <a href="../battle/battle.html">Pokebattle</a>
+    </nav>
+  </div>
+
+  <main class="purchase-container" id="purchase-root">
+    <!-- Product summary -->
+    <section class="card">
+      <div class="product-summary">
+        <img id="prod-img" alt="product" />
+        <div>
+          <h1 id="prod-name"></h1>
+          <p id="prod-desc" class="muted"></p>
+          <div class="price-row">
+            <span>Unit Price</span>
+            <strong id="prod-price"></strong>
+          </div>
+          <div class="qty-row">
+            <label for="qty">Quantity</label>
+            <input id="qty" type="number" min="1" value="1" />
+          </div>
+          <div class="totals">
+            <div><span>Subtotal</span><strong id="subtotal"></strong></div>
+            <div><span>Shipping</span><strong id="shipping"></strong></div>
+            <div><span>Tax (18%)</span><strong id="tax"></strong></div>
+            <div><span>Total</span><strong id="total"></strong></div>
+          </div>
+          <div class="actions">
+            <button id="order-btn" class="btn primary">Order Now</button>
+            <a class="btn secondary" href="../shop/shop.html">Back to Shop</a>
+          </div>
+          <p class="muted" style="margin-top:8px;">Prices shown in INR for demo; taxes and shipping are illustrative.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer form -->
+    <section class="card customer-info">
+      <h2>Customer details</h2>
+      <form id="order-form" novalidate>
+        <input type="text" id="name" placeholder="Full name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="tel" id="phone" placeholder="Phone" required />
+        <input type="text" id="address" placeholder="Address" required />
+        <input type="text" id="city" placeholder="City" required />
+        <input type="text" id="state" placeholder="State" required />
+        <input type="text" id="zip" placeholder="PIN / ZIP" required />
+        <textarea id="note" placeholder="Order note (optional)"></textarea>
+      </form>
+    </section>
+  </main>
+
+  <script src="../js/purchase.js" defer></script>
+</body>
+</html>

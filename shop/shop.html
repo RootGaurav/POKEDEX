@@ -1,89 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pokedex Shop</title>
-    <link rel="shortcut icon" href="../img/Pokeball.svg.png" type="image/png" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/shop.css" />
-    <link rel="stylesheet" href="../newpeice/public/style/navbar.css">
-    <!-- <link rel="stylesheet" href="../style/footer.css" /> -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pokedex Shop</title>
+  <link rel="shortcut icon" href="../img/Pokeball.svg.png" type="image/png" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/shop.css" />
+  <link rel="stylesheet" href="../newpeice/public/style/navbar.css" />
 </head>
-
 <body>
-    <!-- Navbar -->
-    <div class="navbar">
-        <div class="logo">
-            <img src="../newpeice/public/img/pokemon.png" alt="logo">
-            
-        </div>
-        <nav>
-            <!-- <a href="#">Home</a>
-             -->
-            <a href="../newpeice/index.html">Home</a>
-            <a href="../home/index.html">Pokedex</a>
-            <a href="../shop/shop.html">Shop</a>
-            <a href="../game1/game1.html">pik-pak-po</a>
-            <a href="../game2/index.html">Who's that pokemon</a>
-            <a href="../battle/battle.html">Pokebattle</a>
-        </nav>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">
+      <img src="../newpeice/public/img/pokemon.png" alt="logo">
     </div>
+    <nav>
+      <a href="../newpeice/index.html">Home</a>
+      <a href="../home/index.html">Pokedex</a>
+      <a href="../shop/shop.html">Shop</a>
+      <a href="../game1/game1.html">pik-pak-po</a>
+      <a href="../game2/index.html">Who's that pokemon</a>
+      <a href="../battle/battle.html">Pokebattle</a>
+    </nav>
+  </div>
 
-    <!-- Search Bar -->
-    <div class="search">
-        <input type="search" placeholder="Search some Merches..." />
-    </div>
+  <!-- Search Bar -->
+  <div class="search">
+    <input type="search" id="search-input" placeholder="Search some Merches..." />
+  </div>
 
-    <!-- Shop Main Container -->
-    <div class="shop-main">
-        <!-- Sections will be created dynamically on JS load -->
-    </div>
+  <!-- Shop Main Container -->
+  <div class="shop-main">
+    <div class="product-grid container" id="shop-main"></div>
+  </div>
 
-    <!-- Footer -->
-    <!-- <footer>
-        <div class="github_link">
-            <p>Our Github</p>
-            <img src="../img/github.png" alt="github" class="github_img" />
-            <div class="pranjal">
-                <a href="https://github.com/rootgaurav" target="_blank">rootgaurav</a>
-            </div>
-        </div>
+  <hr />
 
-        <div class="contact-info">
-            <p>Contact Info</p>
-            <table>
-                <tr>
-                    <th>PHONE</th>
-                    <td>8439941859</td>
-                </tr>
-                <tr>
-                    <th>MAIL</th>
-                    <td>gauravrawat0259@gmail.com</td>
-                </tr>
-                <tr>
-                    <th>LOCATION</th>
-                    <td>21st street, Clementown <br />Dehradun, 241151031</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="contact-us">
-            <a name="contact"></a>
-            <p>Contact Us</p>
-            <input type="email" name="mail" id="mail" placeholder="Email" class="field" /><br />
-            <textarea name="message" id="message" rows="4" placeholder="Message" class="field"></textarea><br />
-            <div>
-                <button id="send_btn">Send</button>
-            </div>
-        </div>
-    </footer> -->
-
-    <hr />
-
-    <script src="../js/shop.js" defer></script>
+  <script src="../js/shop.js" defer></script>
 </body>
-
 </html>
